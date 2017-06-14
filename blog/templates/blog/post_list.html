@@ -9,7 +9,7 @@
 				{{ post.published_date }}
 			</div>
 			<h1><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
-
+			<a href="{% url 'post_detail' pk=post.pk %}">Comments: {{ post.approved_comments.count }}</a>
 		</div>
 	{% endfor %}
 <p><img src="{% static 'images/2.png' %}" width="300" height="300" alt="image" /></p>
